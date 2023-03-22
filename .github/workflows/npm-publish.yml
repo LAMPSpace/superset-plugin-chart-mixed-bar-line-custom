@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci --force
+      - run: npm i --legacy-peer-deps
 
   publish-npm:
     needs: build
