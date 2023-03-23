@@ -46,6 +46,8 @@ interface SupersetPluginChartMixedBarLineCustomCustomizeProps {
   hideYAxis: string[];
   barChartYAxisPosition: string;
   lineChartYAxisPosition: string;
+  lineChartShowValue: boolean;
+  barChartShowValue: boolean;
 }
 
 export type SupersetPluginChartMixedBarLineCustomQueryFormData = QueryFormData &

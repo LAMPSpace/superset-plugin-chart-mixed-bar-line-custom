@@ -126,7 +126,8 @@ export default function SupersetPluginChartMixedBarLineCustom(props) {
     tickLine: props.showXTickLine,
     tickSize: props.xAxisTickSize || 6
   }), /*#__PURE__*/React.createElement(Tooltip, {
-    labelFormatter: label => props.xAxisTitle + ": " + label
+    labelFormatter: label => props.xAxisTitle + ": " + label,
+    formatter: numberFormatter
   }), props.showLegend && /*#__PURE__*/React.createElement(Legend, {
     verticalAlign: props.legendPosition === 'top' ? 'top' : 'bottom',
     wrapperStyle: {
@@ -146,7 +147,7 @@ export default function SupersetPluginChartMixedBarLineCustom(props) {
     }), /*#__PURE__*/React.createElement(Bar, {
       dataKey: key,
       fill: colors == null ? void 0 : colors[index]
-    }, /*#__PURE__*/React.createElement(LabelList, {
+    }, props.barChartShowValue && /*#__PURE__*/React.createElement(LabelList, {
       dataKey: key,
       position: "top",
       formatter: numberFormatter,
@@ -182,7 +183,7 @@ export default function SupersetPluginChartMixedBarLineCustom(props) {
         strokeWidth: 2,
         r: 6
       }
-    }, /*#__PURE__*/React.createElement(LabelList, {
+    }, props.lineChartShowValue && /*#__PURE__*/React.createElement(LabelList, {
       dataKey: key,
       position: "top",
       formatter: numberFormatter,

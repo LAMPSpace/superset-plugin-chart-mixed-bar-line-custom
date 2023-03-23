@@ -73,6 +73,8 @@ export default function transformProps(chartProps: ChartProps) {
     hideYAxis,
     barChartYAxisPosition,
     lineChartYAxisPosition,
+    lineChartShowValue,
+    barChartShowValue,
   } = formData;
   const data = queriesData[0].data as TimeseriesDataRecord[];
 
@@ -110,5 +112,7 @@ export default function transformProps(chartProps: ChartProps) {
     hideYAxis,
     barChartYAxisPosition,
     lineChartYAxisPosition,
+    lineChartShowValue,
+    barChartShowValue,
   };
 }

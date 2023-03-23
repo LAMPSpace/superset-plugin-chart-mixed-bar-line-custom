@@ -74,7 +74,9 @@ export default function transformProps(chartProps) {
     lineChartStrokeWidth,
     hideYAxis,
     barChartYAxisPosition,
-    lineChartYAxisPosition
+    lineChartYAxisPosition,
+    lineChartShowValue,
+    barChartShowValue
   } = formData;
   var data = queriesData[0].data;
   var colorScale = CategoricalColorNamespace.getScale(colorScheme);
@@ -105,6 +107,8 @@ export default function transformProps(chartProps) {
     lineChartStrokeWidth,
     hideYAxis,
     barChartYAxisPosition,
-    lineChartYAxisPosition
+    lineChartYAxisPosition,
+    lineChartShowValue,
+    barChartShowValue
   };
 }

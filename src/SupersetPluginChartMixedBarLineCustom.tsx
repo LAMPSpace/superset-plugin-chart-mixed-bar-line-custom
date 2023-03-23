@@ -126,7 +126,10 @@ export default function SupersetPluginChartMixedBarLineCustom(
         tickLine={props.showXTickLine}
         tickSize={props.xAxisTickSize || 6}
       />
-      <Tooltip labelFormatter={label => `${props.xAxisTitle}: ${label}`} />
+      <Tooltip 
+        labelFormatter={label => `${props.xAxisTitle}: ${label}`} 
+        formatter={numberFormatter}
+      />
       {props.showLegend && (
         <Legend
           verticalAlign={props.legendPosition === 'top' ? 'top' : 'bottom'}
@@ -147,18 +150,20 @@ export default function SupersetPluginChartMixedBarLineCustom(
             }
           />
           <Bar dataKey={key} fill={colors?.[index]}>
-            <LabelList
-              dataKey={key}
-              position="top"
-              formatter={numberFormatter}
-              style={{
-                // eslint-disable-next-line theme-colors/no-literal-colors
-                color: '#000',
-                fontSize: 12,
-                textShadow:
-                  '-1px 0px 0px white, 1px 0px 0px white, 0px -1px 0px white, 0px 1px 0px white',
-              }}
-            />
+            {props.barChartShowValue && (
+              <LabelList
+                dataKey={key}
+                position="top"
+                formatter={numberFormatter}
+                style={{
+                  // eslint-disable-next-line theme-colors/no-literal-colors
+                  color: '#000',
+                  fontSize: 12,
+                  textShadow:
+                    '-1px 0px 0px white, 1px 0px 0px white, 0px -1px 0px white, 0px 1px 0px white',
+                }}
+              />
+            )}
           </Bar>
         </>
       ))}
@@ -191,18 +196,20 @@ export default function SupersetPluginChartMixedBarLineCustom(
                 r: 6,
               }}
             >
-              <LabelList
-                dataKey={key}
-                position="top"
-                formatter={numberFormatter}
-                style={{
-                  // eslint-disable-next-line theme-colors/no-literal-colors
-                  color: '#000',
-                  fontSize: 12,
-                  textShadow:
-                    '-1px 0px 0px white, 1px 0px 0px white, 0px -1px 0px white, 0px 1px 0px white',
-                }}
-              />
+              {props.lineChartShowValue && (
+                <LabelList
+                  dataKey={key}
+                  position="top"
+                  formatter={numberFormatter}
+                  style={{
+                    // eslint-disable-next-line theme-colors/no-literal-colors
+                    color: '#000',
+                    fontSize: 12,
+                    textShadow:
+                      '-1px 0px 0px white, 1px 0px 0px white, 0px -1px 0px white, 0px 1px 0px white',
+                  }}
+                />
+              )}
             </Line>
           </>
         );

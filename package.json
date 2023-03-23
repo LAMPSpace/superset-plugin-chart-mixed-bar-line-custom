@@ -1,6 +1,6 @@
 {
   "name": "superset-plugin-chart-mixed-bar-line-custom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Superset Plugin Chart Mixed Bar Line Custom",
   "sideEffects": false,
   "main": "lib/index.js",

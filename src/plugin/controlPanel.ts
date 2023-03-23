@@ -301,6 +301,18 @@ const config: ControlPanelConfig = {
             },
           },
         ],
+        [
+          {
+            name: 'bar_chart_show_value',
+            config: {
+              type: 'CheckboxControl',
+              label: t('Show Value'),
+              renderTrigger: true,
+              default: false,
+              description: t('Show Value'),
+            },
+          },
+        ],
       ],
     },
     {
@@ -352,7 +364,19 @@ const config: ControlPanelConfig = {
               ],
               description: t('Line Chart Y Axis Position'),
             },
-          }
+          },
+        ],
+        [
+          {
+            name: 'line_chart_show_value',
+            config: {
+              type: 'CheckboxControl',
+              label: t('Line Chart Show Value'),
+              renderTrigger: true,
+              default: false,
+              description: t('Line Chart Show Value'),
+            },
+          },
         ],
       ],
     },

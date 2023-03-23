@@ -264,6 +264,15 @@ var config = {
         choices: [['left', 'Left'], ['right', 'Right']],
         description: t('Y Axis Position')
       }
+    }], [{
+      name: 'bar_chart_show_value',
+      config: {
+        type: 'CheckboxControl',
+        label: t('Show Value'),
+        renderTrigger: true,
+        default: false,
+        description: t('Show Value')
+      }
     }]]
   }, {
     label: t('Line Chart'),
@@ -302,6 +311,15 @@ var config = {
         default: 'left',
         choices: [['left', 'Left'], ['right', 'Right']],
         description: t('Line Chart Y Axis Position')
+      }
+    }], [{
+      name: 'line_chart_show_value',
+      config: {
+        type: 'CheckboxControl',
+        label: t('Line Chart Show Value'),
+        renderTrigger: true,
+        default: false,
+        description: t('Line Chart Show Value')
       }
     }]]
   }, {
